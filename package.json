@@ -1,0 +1,22 @@
+{
+  "name": "gmau_website_clone",
+  "version": "1.0.0",
+  "description": "Global Martial Arts University Website Clone",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imrankrumon/globalmartialarts_university_clone.git"
+  },
+  "author": "Imran Rumon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/imrankrumon/globalmartialarts_university_clone/issues"
+  },
+  "homepage": "https://github.com/imrankrumon/globalmartialarts_university_clone#readme",
+  "dependencies": {
+    "gh-pages": "^3.2.3"
+  }
+}

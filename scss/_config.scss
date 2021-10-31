@@ -1,0 +1,26 @@
+$bg-primary: #e5e5e5;
+$bg-secondary: #e9e9e9;
+$bg-dark: #000000;
+$bg-grey: #22222c;
+
+$primary-color: #fec733;
+$light-color: #ffffff;
+$dark-color: #242424;
+$lighter-dark-color: #353535;
+
+@function set-text-color($color) {
+    @if (lightness($color) > 50) {
+        @return $dark-color;
+    } @else {
+        @return $light-color;
+    }
+}
+
+@mixin set-bg($color) {
+    background-color: $color;
+    color: set-text-color($color);
+}
+
+@mixin transition($duration) {
+    transition: all $duration ease;
+}

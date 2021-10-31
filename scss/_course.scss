@@ -1,0 +1,231 @@
+// Header Section
+.header {
+    .hero-course {
+        background: url('../img/hero-course.jpg') no-repeat center center;
+        background-size: cover;
+    }
+}
+
+// Result Section
+.result {
+    text-align: center;
+
+    &-course {
+        background: url('../img/result-bg-course.jpg') no-repeat center center;
+        background-size: cover;
+    }
+
+    h1 {
+        color: set-text-color($bg-grey);
+    }
+
+    &-content {
+        width: 60%;
+        margin: 0 auto;
+        color: $light-color;
+
+        p:first-child {
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+    }
+
+    &-student {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        h5 {
+            font-size: 1rem;
+            margin: 0 0.7rem;
+        }
+
+        img {
+            border-radius: 50%;
+        }
+    }
+}
+
+// learn more section
+.learn-more {
+    background: url('../img/learn-more-bg.jpg') no-repeat center center;
+    background-size: cover;
+
+    h1 {
+        color: set-text-color($bg-grey);
+    }
+
+    p {
+        color: $light-color;
+    }
+
+    &-items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    &-item {
+        flex: 0 1 150px;
+        margin: 0.675rem;
+        @include set-bg(transparent);
+        border: 1px solid $primary-color;
+        border-radius: 0.25rem;
+        padding: 3rem 1.5rem;
+        @include transition(300ms);
+        box-sizing: initial;
+
+        i {
+            background-color: $primary-color;
+            width: 75px;
+            padding: 1.25rem;
+            border-radius: 50%;
+            margin-bottom: 3rem;
+        }
+
+        &:hover {
+            @include set-bg($light-color);
+            box-shadow: 0px 10px 0px 0px $primary-color,
+                0px 5px 20px 10px rgba($primary-color, 0.2);
+        }
+    }
+}
+
+// FAQ Section
+.faq {
+    &-wrapper {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    &-item {
+        margin-bottom: 1.25rem;
+
+        .faq-question {
+            display: block;
+            height: 100%;
+            @include set-bg($primary-color);
+            font-weight: 700;
+            padding: 0.75rem 1rem;
+            border-radius: 0.3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+
+            i {
+                color: #514423;
+            }
+
+            .fa-minus {
+                display: none;
+            }
+        }
+
+        .faq-answer {
+            padding: 0 1rem;
+            display: none;
+
+            h3 {
+                font-size: 1rem;
+                margin: 1.25rem 0;
+            }
+        }
+    }
+
+    .trigger {
+        .faq-question {
+            .fa-minus {
+                display: block;
+            }
+
+            .fa-plus {
+                display: none;
+            }
+        }
+
+        .open {
+            display: block;
+        }
+    }
+}
+
+// Pricing Section
+.pricing {
+    text-align: center;
+
+    &-cards {
+        // display: grid;
+        // grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        // grid-gap: 1.25rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    &-card {
+        flex: 1;
+        margin: 0.675rem;
+        @include set-bg($bg-grey);
+        padding: 1.5rem 1rem;
+        display: flex;
+        flex-direction: column;
+        border-radius: 0.5rem;
+
+        &:nth-child(even) {
+            @include set-bg($primary-color);
+
+            .pricing-list {
+                li,
+                li:first-child {
+                    border-color: #86774f;
+                }
+            }
+        }
+
+        h2 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 2.5rem;
+
+            span {
+                font-weight: 400;
+            }
+        }
+
+        .pricing-list {
+            list-style: none;
+
+            li {
+                padding: 0.75rem 0;
+                border-bottom: 1px solid #494949;
+                font-size: 0.9rem;
+
+                &:first-child {
+                    border-top: 1px solid #494949;
+                    margin-top: 1.25rem;
+                }
+
+                &:last-child {
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+
+        a {
+            margin-top: auto;
+            margin-bottom: 0.75rem;
+            @include set-bg($bg-grey);
+
+            &:hover {
+                @include set-bg($primary-color);
+                border: 1px solid $bg-grey;
+            }
+        }
+    }
+
+    img {
+        margin-top: 2rem;
+        margin-bottom: 0.675rem;
+    }
+}

@@ -1,0 +1,163 @@
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.btn {
+    display: inline-block;
+    @include set-bg($primary-color);
+    padding: 0.7rem 2.5rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    @include transition(300ms);
+    border: 1px solid $primary-color;
+    cursor: pointer;
+
+    &:hover {
+        @include set-bg($bg-grey);
+    }
+}
+
+.primary-highlight {
+    color: $primary-color !important;
+}
+
+.dark-highlight {
+    color: $dark-color !important;
+    font-weight: 700 !important;
+}
+
+.bg-shape-1 {
+    background: url('../img/bg-shape-1.png') no-repeat left top;
+}
+
+.bg-shape-2 {
+    background: url('../img/bg-shape-2.png') no-repeat right top;
+}
+
+.bg-shape-3 {
+    background: url('../img/bg-shape-3.png') no-repeat left top;
+}
+
+.bg-shape-4 {
+    background: url('../img/bg-shape-4.png') no-repeat left top;
+}
+
+.bg-shape-5 {
+    background: url('../img/bg-shape-5.png') no-repeat right top;
+}
+
+.bg-shape-6 {
+    background: url('../img/bg-shape-6.png') no-repeat left top;
+}
+
+.bg-shape-7 {
+    background: url('../img/bg-shape-7.png') no-repeat right top;
+}
+
+.sec-heading {
+    text-align: center;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    color: $dark-color;
+    line-height: 1.2;
+}
+
+.sub-sec-heading {
+    text-align: center;
+    font-size: 1rem;
+    color: $lighter-dark-color;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 0.675rem;
+}
+
+.content-heading {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.images {
+    width: 50%;
+}
+
+.content {
+    width: 40%;
+
+    p {
+        margin: 1.25rem 0;
+        font-size: 0.8rem;
+    }
+}
+
+.lighter-color {
+    color: #505050;
+}
+
+.signup-grid {
+    display: grid !important;
+    grid-template-columns: 1.3fr 1fr;
+    grid-gap: 1.25rem;
+    align-items: center;
+}
+
+// Margin & Padding classes
+$spaceamounts: (1, 2, 3, 4, 5);
+
+@each $space in $spaceamounts {
+    // All around margin
+    .m-#{$space} {
+        margin: #{$space}rem;
+    }
+
+    // Vertical margin
+    .my-#{$space} {
+        margin: #{$space}rem 0;
+    }
+
+    // Top margin
+    .mt-#{$space} {
+        margin-top: #{$space}rem;
+    }
+
+    // Bottom margin
+    .mb-#{$space} {
+        margin-bottom: #{$space}rem;
+    }
+
+    // Right margin
+    .mr-#{$space} {
+        margin-right: #{$space}rem;
+    }
+
+    // Left margin
+    .ml-#{$space} {
+        margin-left: #{$space}rem;
+    }
+
+    // All around padding
+    .p-#{$space} {
+        padding: #{$space}rem;
+    }
+
+    // Vertical padding
+    .py-#{$space} {
+        padding: #{$space}rem 0;
+    }
+
+    // Top padding
+    .pt-#{$space} {
+        padding-top: #{$space}rem;
+    }
+
+    // Bottom padding
+    .pb-#{$space} {
+        padding-bottom: #{$space}rem;
+    }
+}

@@ -1,0 +1,272 @@
+@media (max-width: 1000px) {
+    // Header
+    .header {
+        .navbar {
+            .menu-btn {
+                display: block;
+            }
+
+            .nav-list {
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                margin: 0;
+                background: $primary-color;
+                opacity: 0.9;
+                padding: 2.5rem 1.5rem;
+                width: 50%;
+                height: 100vh;
+                transform: translateX(-500px);
+                @include transition(500ms);
+
+                .nav-item {
+                    padding: 0.7rem;
+                    border-bottom: 1px solid $lighter-dark-color;
+
+                    &:last-child {
+                        border-bottom: none;
+                    }
+                }
+
+                .nav-link {
+                    color: set-text-color($primary-color);
+                }
+            }
+
+            .login-btn {
+                margin-left: auto;
+                margin-right: 1.25rem;
+            }
+        }
+
+        .show {
+            .nav-list {
+                transform: translateX(-60px);
+            }
+        }
+
+        .hero {
+            padding: 2.5rem 0;
+
+            .hero-text {
+                h1 {
+                    font-size: 2.5rem;
+                    width: 80%;
+                }
+            }
+        }
+    }
+
+    // Core Benifits
+    .core-benifits {
+        &-items {
+            .figure {
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    // video section
+    .video {
+        iframe {
+            width: 90%;
+        }
+    }
+
+    // pricing section
+    .pricing {
+        &-card {
+            flex: 0 1 250px;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    // Utilities
+    .container {
+        padding: 1.25rem 0;
+        flex-wrap: wrap;
+    }
+
+    section {
+        padding: 1.25rem 0 !important;
+    }
+
+    .sec-heading {
+        margin-bottom: 1.25rem;
+        font-size: 2rem;
+    }
+
+    .sub-sec-heading {
+        width: 90%;
+        margin-bottom: 1.25rem;
+    }
+
+    .images {
+        width: 100%;
+        margin: 1.25rem 0;
+        display: grid;
+        justify-content: center;
+    }
+
+    .content {
+        width: 100%;
+        margin: 0;
+        order: 1;
+    }
+
+    .signup-grid {
+        grid-template-columns: 1fr;
+    }
+
+    // Header
+    .header {
+        .navbar {
+            padding: 0;
+
+            .nav-list {
+                top: -20px;
+            }
+        }
+
+        .hero {
+            padding: 1rem 0;
+
+            .hero-text {
+                width: 90%;
+
+                h1 {
+                    font-size: 2rem;
+                }
+            }
+        }
+
+        .show {
+            .nav-list {
+                transform: translateX(-40px);
+            }
+        }
+    }
+
+    // Result section
+    .result {
+        &-content {
+            width: 90%;
+
+            p:first-child {
+                font-size: 0.9rem;
+            }
+        }
+    }
+
+    // Core Benifits
+    .core-benifits {
+        &-items {
+            .container {
+                grid-template-columns: 1fr;
+                grid-gap: 1.25rem;
+            }
+
+            .figure {
+                display: none;
+            }
+        }
+    }
+
+    // Students Section
+    .students {
+        &-item {
+            margin-bottom: 1.25rem;
+        }
+    }
+
+    // Contanct Us
+    .contact {
+        text-align: center;
+
+        .content {
+            order: -1;
+            margin-top: -3rem;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        &-form {
+            width: 100%;
+        }
+    }
+
+    // Ready section
+    .ready-dark {
+        h1,
+        p {
+            text-align: center;
+        }
+
+        .ready-wrapper {
+            .ready-text {
+                width: 90%;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    // Signup now section
+    .no-risk {
+        &-content {
+            width: 90%;
+            margin: 0 auto;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    // Header
+    .header {
+        .hero {
+            padding: 0;
+        }
+
+        .show {
+            .nav-list {
+                transform: translateX(-25px);
+            }
+        }
+    }
+
+    // Learn more section
+    .learn-more {
+        &-item {
+            flex: 0 1 250px;
+        }
+    }
+
+    // video section
+    .video {
+        iframe {
+            height: 250px;
+        }
+    }
+
+    // pricing section
+    .pricing {
+        &-card {
+            flex: 0 1 300px;
+        }
+    }
+
+    // other fees section
+    .other-fees {
+        flex-wrap: wrap;
+
+        &-card {
+            width: 100%;
+            margin-bottom: 1.25rem;
+        }
+    }
+}
